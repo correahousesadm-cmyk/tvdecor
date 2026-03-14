@@ -1,0 +1,9 @@
+<svg width="420" height="140" viewBox="0 0 420 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="420" height="140" rx="22" fill="#111111"/>
+  <path d="M64 36H104V48H90V104H78V48H64V36Z" fill="#C9A24A"/>
+  <path d="M114 36H160C176 36 188 46 188 62C188 77 176 88 160 88H126V104H114V36ZM158 76C167 76 175 71 175 62C175 53 167 48 158 48H126V76H158Z" fill="#C9A24A"/>
+  <path d="M198 36H210L245 89V36H257V104H245L210 51V104H198V36Z" fill="#C9A24A"/>
+  <path d="M292 36H304L336 104H323L316 88H280L273 104H260L292 36ZM311 77L298 50L285 77H311Z" fill="#C9A24A"/>
+  <text x="352" y="58" fill="#C9A24A" font-family="Georgia, serif" font-size="18" text-anchor="middle">TV DECOR</text>
+  <text x="352" y="82" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" letter-spacing="1.2">PARAGUAY</text>
+</svg>

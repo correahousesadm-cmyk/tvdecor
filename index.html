@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TV Decor | Leilões Premium para Casa e Decoração</title>
+    <meta
+      name="description"
+      content="TV Decor: empresa especializada em leilões ao vivo e curadoria premium de produtos para casa e decoração."
+    />
+    <meta name="theme-color" content="#111111" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <div class="ambient ambient-top parallax-layer" data-parallax-speed="0.08" aria-hidden="true"></div>
+    <div class="ambient ambient-bottom parallax-layer" data-parallax-speed="0.12" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#hero" aria-label="TV Decor">
+        <img src="assets/logo-tvdecor.svg" alt="TV Decor" />
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primary-nav" class="nav">
+        <a href="#sobre" data-i18n="nav.sobre">Sobre</a>
+        <a href="#como-funciona" data-i18n="nav.comoFunciona">Como Funciona</a>
+        <a href="#produtos" data-i18n="nav.produtos">Produtos</a>
+        <a href="#empresa" data-i18n="nav.empresa">Empresa</a>
+        <a href="#contato" data-i18n="nav.contato">Contato</a>
+      </nav>
+
+      <div class="language-switcher" aria-label="Language selector">
+        <button
+          type="button"
+          class="lang-current"
+          aria-expanded="false"
+          aria-controls="lang-menu"
+          aria-haspopup="true"
+          aria-label="Idioma atual: Espanhol Paraguai"
+        >
+          <img class="lang-current-flag" src="assets/flag-py.svg" alt="Paraguay" />
+          <span class="lang-current-caret" aria-hidden="true"></span>
+        </button>
+        <div id="lang-menu" class="lang-menu" role="menu" aria-hidden="true">
+          <button
+            type="button"
+            class="lang-option"
+            data-lang="es"
+            role="menuitem"
+            aria-label="Español Paraguay"
+            title="Español Paraguay"
+          >
+            <img src="assets/flag-py.svg" alt="Paraguay" />
+          </button>
+          <button
+            type="button"
+            class="lang-option"
+            data-lang="pt-br"
+            role="menuitem"
+            aria-label="Português Brasil"
+            title="Português Brasil"
+          >
+            <img src="assets/flag-br.svg" alt="Brasil" />
+          </button>
+          <button
+            type="button"
+            class="lang-option"
+            data-lang="en"
+            role="menuitem"
+            aria-label="English United States"
+            title="English United States"
+          >
+            <img src="assets/flag-us.svg" alt="United States" />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero reveal is-visible">
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <p class="hero-domain">tvdecor.com.py</p>
+          <h1 data-i18n="hero.title">TV Decor</h1>
+          <h2 data-i18n="hero.subtitle">
+            Canal de leilões ao vivo de produtos para casa e decoração
+          </h2>
+          <p data-i18n="hero.description">Uma empresa completa de curadoria, transmissão e comercialização de peças exclusivas.</p>
+          <div class="hero-actions">
+            <a class="btn-gold" href="#sobre" data-i18n="hero.buttonPrimary">Conheça o conceito</a>
+            <a class="btn-outline" href="#produtos" data-i18n="hero.buttonSecondary">Ver produtos</a>
+          </div>
+        </div>
+
+        <div class="hero-kpis parallax-layer" data-parallax-speed="-0.06">
+          <article>
+            <strong data-i18n="hero.kpi1.value">+10.000</strong>
+            <span data-i18n="hero.kpi1.label">itens apresentados</span>
+          </article>
+          <article>
+            <strong data-i18n="hero.kpi2.value">3 países</strong>
+            <span data-i18n="hero.kpi2.label">atuação regional</span>
+          </article>
+          <article>
+            <strong data-i18n="hero.kpi3.value">8 anos</strong>
+            <span data-i18n="hero.kpi3.label">experiência em curadoria</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="sobre" class="section split reveal">
+        <div class="section-media">
+          <img src="assets/sobre-showroom.jpg" alt="Showroom TV Decor" loading="lazy" />
+        </div>
+        <div class="section-content">
+          <p class="eyebrow" data-i18n="labels.institutional">Apresentação institucional</p>
+          <h2 data-i18n="sobre.title">Um novo conceito em leilões de decoração</h2>
+          <p data-i18n="sobre.text1">
+            A TV Decor é uma operação de mídia e comércio especializada em produtos premium
+            para casa. Combinamos curadoria, transmissão ao vivo e suporte consultivo.
+          </p>
+          <p data-i18n="sobre.text2">
+            Cada transmissão é planejada para apresentar histórias, diferenciais técnicos e
+            oportunidades exclusivas de compra para um público exigente.
+          </p>
+        </div>
+      </section>
+
+      <section class="parallax-band parallax-showroom reveal">
+        <div class="parallax-band-content">
+          <p data-i18n="parallax.showroom">Curadoria internacional para ambientes autorais</p>
+        </div>
+      </section>
+
+      <section id="como-funciona" class="section reveal">
+        <div class="section-head centered">
+          <p class="eyebrow" data-i18n="labels.process">Processo</p>
+          <h2 data-i18n="comoFunciona.title">Como funciona</h2>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card">
+            <div class="step-icon">01</div>
+            <h3 data-i18n="comoFunciona.step1Title">Assista à programação</h3>
+            <p data-i18n="comoFunciona.step1Text">Transmissões com agenda semanal e apresentação detalhada.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-icon">02</div>
+            <h3 data-i18n="comoFunciona.step2Title">Analise os produtos</h3>
+            <p data-i18n="comoFunciona.step2Text">Descrição técnica, materiais e proposta estética de cada item.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-icon">03</div>
+            <h3 data-i18n="comoFunciona.step3Title">Participe do leilão</h3>
+            <p data-i18n="comoFunciona.step3Text">Ofertas em tempo real com equipe de apoio comercial.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-icon">04</div>
+            <h3 data-i18n="comoFunciona.step4Title">Receba com segurança</h3>
+            <p data-i18n="comoFunciona.step4Text">Logística planejada e acompanhamento até a entrega.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="produtos" class="section reveal">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="labels.curated">Curadoria</p>
+          <h2 data-i18n="produtos.title">Produtos em destaque</h2>
+          <p class="section-subtitle" data-i18n="produtos.subtitle">
+            Produtos baseados em catálogos premium para mesa posta e utilitários de luxo.
+          </p>
+        </div>
+
+        <div class="products-grid products-grid-main">
+          <article class="product-card">
+            <img
+              src="Produtos/1/D_NQ_NP_2X_613263-MLB98890282463.jpg"
+              alt="Jogo de jantar de porcelana Noritak"
+              loading="lazy"
+            />
+            <div class="product-copy">
+              <h3 data-i18n="produtos.p1Name">
+                Jogo de jantar em porcelana Noritak Designed, 52 peças, areia e branco minimalista
+              </h3>
+              <p data-i18n="produtos.p1Desc">
+                Conjunto em porcelana com estética minimalista em tons areia e branco para mesa
+                posta sofisticada.
+              </p>
+              <ul class="product-specs">
+                <li data-i18n="produtos.p1Spec1">52 peças</li>
+                <li data-i18n="produtos.p1Spec2">Porcelana de alto padrão</li>
+                <li data-i18n="produtos.p1Spec3">Estilo minimalista: areia e branco</li>
+              </ul>
+              <a
+                class="product-link"
+                href="https://www.mercadolivre.com.br/jogo-de-jantar-porcelana-noritak-designed-52-pecas/up/MLBU3556208428?pdp_filters=item_id%3AMLB5923150944&matt_tool=38524122#origin=share&sid=share&wid=MLB5923150944&action=more"
+                target="_blank"
+                rel="noreferrer"
+                data-i18n="produtos.reference"
+                >Ver referência</a
+              >
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img
+              src="Produtos/2/D_NQ_NP_2X_615506-MLB71660276833.jpg"
+              alt="Faqueiro banhado a ouro, 24 peças"
+              loading="lazy"
+            />
+            <div class="product-copy">
+              <h3 data-i18n="produtos.p2Name">
+                Faqueiro todo banhado a ouro, 24 peças, Solingen Germany Designed
+              </h3>
+              <p data-i18n="produtos.p2Desc">
+                Obra-prima em inox 18/10 com banho em ouro e acabamento de alto brilho para uma
+                experiência sofisticada à mesa.
+              </p>
+              <ul class="product-specs">
+                <li data-i18n="produtos.p2Spec1">24 peças</li>
+                <li data-i18n="produtos.p2Spec2">Inox 18/10 banhado a ouro</li>
+                <li data-i18n="produtos.p2Spec3">Maleta tipo 007 em couro ecológico</li>
+              </ul>
+              <a
+                class="product-link"
+                href="https://www.mercadolivre.com.br/faqueiro-todo-banhado-a-ouro-24pcs-solingen-germany-designed/up/MLBU778058934?pdp_filters=item_id%3AMLB4035496408&matt_tool=38524122#origin=share&sid=share&wid=MLB4035496408&action=more"
+                target="_blank"
+                rel="noreferrer"
+                data-i18n="produtos.reference"
+                >Ver referência</a
+              >
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img
+              src="Produtos/3/D_NQ_NP_2X_787525-MLB75147684202.jpg"
+              alt="Faqueiro full gold, 86 peças"
+              loading="lazy"
+            />
+            <div class="product-copy">
+              <h3 data-i18n="produtos.p3Name">
+                Faqueiro 86 peças banhado a ouro Solingen Germany Designed
+              </h3>
+              <p data-i18n="produtos.p3Desc">
+                Conjunto completo premium com ampla composição de serviço e apresentação em maleta
+                exclusiva.
+              </p>
+              <ul class="product-specs">
+                <li data-i18n="produtos.p3Spec1">86 peças</li>
+                <li data-i18n="produtos.p3Spec2">Inox 18/10 banhado a ouro</li>
+                <li data-i18n="produtos.p3Spec3">Maleta premium com fechos dourados</li>
+              </ul>
+              <a
+                class="product-link"
+                href="https://www.mercadolivre.com.br/faqueiro-86-pecas-full-gold-solingen-maleta-007/up/MLBU1987942982?pdp_filters=item_id%3AMLB4189363430&matt_tool=38524122#origin=share&sid=share&wid=MLB4189363430&action=more"
+                target="_blank"
+                rel="noreferrer"
+                data-i18n="produtos.reference"
+                >Ver referência</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="parallax-band parallax-details reveal">
+        <div class="parallax-band-content">
+          <p data-i18n="parallax.details">Design, matéria-prima e acabamento com critério de colecionador</p>
+        </div>
+      </section>
+
+      <section id="categorias" class="section reveal">
+        <div class="section-head centered">
+          <p class="eyebrow" data-i18n="labels.categories">Categorias</p>
+          <h2 data-i18n="categorias.title">O que você encontra nos leilões</h2>
+        </div>
+        <ul class="categories-list">
+          <li data-i18n="categorias.item1">Faqueiros premium</li>
+          <li data-i18n="categorias.item2">Mesa posta</li>
+          <li data-i18n="categorias.item3">Jogos de jantar em porcelana</li>
+          <li data-i18n="categorias.item4">Coleções full gold</li>
+          <li data-i18n="categorias.item5">Maletas e kits completos</li>
+        </ul>
+      </section>
+
+      <section id="empresa" class="section reveal">
+        <div class="company-grid">
+          <div class="company-image-wrap">
+            <img src="assets/empresa-team.jpg" alt="Equipe TV Decor" loading="lazy" />
+          </div>
+          <div class="company-content">
+            <p class="eyebrow" data-i18n="labels.company">Empresa</p>
+            <h2 data-i18n="empresa.title">Empresa responsável</h2>
+            <p class="company-name">TV Decor</p>
+            <p data-i18n="empresa.description">
+              Importadora e curadora responsável pelos produtos apresentados nos leilões da TV Decor,
+              com operação no Paraguai, no Brasil e no mercado regional.
+            </p>
+            <div class="values-grid">
+              <article>
+                <h3 data-i18n="empresa.missaoTitle">Missão</h3>
+                <p data-i18n="empresa.missaoText">Conectar público e design por meio de experiências de compra transparentes.</p>
+              </article>
+              <article>
+                <h3 data-i18n="empresa.visaoTitle">Visão</h3>
+                <p data-i18n="empresa.visaoText">Ser referência regional em leilões premium para casa e decoração.</p>
+              </article>
+              <article>
+                <h3 data-i18n="empresa.valoresTitle">Valores</h3>
+                <p data-i18n="empresa.valoresText">Curadoria, confiança comercial, atendimento consultivo e excelência.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta-band reveal">
+        <h2 data-i18n="cta.title">Quer acompanhar os próximos leilões ao vivo?</h2>
+        <p data-i18n="cta.text">Fale com nosso time comercial para receber agenda e condições especiais.</p>
+        <a class="btn-gold" href="#contato" data-i18n="cta.button">Entrar em contato</a>
+      </section>
+
+      <section id="contato" class="section reveal">
+        <div class="section-head centered">
+          <p class="eyebrow" data-i18n="labels.contact">Contato</p>
+          <h2 data-i18n="contato.title">Contato institucional e comercial</h2>
+        </div>
+
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:contato@tvdecor.com.py">
+            <span data-i18n="contato.emailLabel">E-mail</span>
+            <strong>contato@tvdecor.com.py</strong>
+          </a>
+          <a class="contact-card" href="https://wa.me/595000000000" target="_blank" rel="noreferrer">
+            <span>WhatsApp</span>
+            <strong>+595XXXXXXXXX</strong>
+          </a>
+          <div class="contact-card">
+            <span data-i18n="contato.addressLabel">Endereço</span>
+            <strong>Asunción, Paraguay</strong>
+          </div>
+        </div>
+
+        <form class="contact-form" action="#" method="post">
+          <label>
+            <span data-i18n="contato.formName">Nome</span>
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            <span data-i18n="contato.formEmail">E-mail</span>
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            <span data-i18n="contato.formMessage">Mensagem</span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn-dark" data-i18n="contato.formButton">Enviar mensagem</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-left">
+        <img src="assets/logo-tvdecor.svg" alt="TV Decor" />
+        <p>© <span id="year"></span> TV Decor</p>
+      </div>
+      <div class="footer-links">
+        <a href="privacidade/" data-i18n="footer.privacy">Política de Privacidade</a>
+        <a href="termos/" data-i18n="footer.terms">Termos</a>
+      </div>
+    </footer>
+  </body>
+</html>
