@@ -353,6 +353,13 @@ main {
   color: #fff;
 }
 
+.hero-logo {
+  width: clamp(90px, 9vw, 130px);
+  height: auto;
+  margin-bottom: 1.4rem;
+  opacity: 0.95;
+}
+
 .hero-domain {
   margin: 0;
   font-size: 0.78rem;
@@ -541,12 +548,15 @@ main {
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
+  aspect-ratio: 16 / 10;
 }
 
 .section-media img {
   width: 100%;
-  aspect-ratio: 16 / 10;
+  height: 115%;
   object-fit: cover;
+  transform: translateY(var(--parallax-img-offset, -7.5%));
+  will-change: transform;
 }
 
 .section-content p {
@@ -689,12 +699,15 @@ main {
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
+  aspect-ratio: 4 / 3;
 }
 
 .company-image-wrap img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 115%;
   object-fit: cover;
+  transform: translateY(var(--parallax-img-offset, -7.5%));
+  will-change: transform;
 }
 
 .company-content {

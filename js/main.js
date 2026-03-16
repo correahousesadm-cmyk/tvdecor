@@ -472,7 +472,8 @@ function setupParallaxLayers() {
   }
 
   const layers = document.querySelectorAll("[data-parallax-speed]");
-  if (!layers.length) {
+  const imgLayers = document.querySelectorAll("[data-parallax-img]");
+  if (!layers.length && !imgLayers.length) {
     return;
   }
 
@@ -480,11 +481,24 @@ function setupParallaxLayers() {
 
   const updateLayers = () => {
     const scrollTop = window.scrollY;
+    const vh = window.innerHeight;
+
     layers.forEach((layer) => {
       const speed = Number(layer.dataset.parallaxSpeed || 0);
       const offset = scrollTop * speed;
       layer.style.setProperty("--parallax-offset", `${offset.toFixed(2)}px`);
     });
+
+    imgLayers.forEach((img) => {
+      const wrap = img.parentElement;
+      const rect = wrap.getBoundingClientRect();
+      if (rect.bottom < -100 || rect.top > vh + 100) return;
+      const speed = Number(img.dataset.parallaxImg || 0.1);
+      const fromCenter = rect.top + rect.height / 2 - vh / 2;
+      const offset = fromCenter * speed;
+      img.style.setProperty("--parallax-img-offset", `calc(-7.5% + ${offset.toFixed(2)}px)`);
+    });
+
     ticking = false;
   };
 
