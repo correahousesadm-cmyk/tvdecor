@@ -4,9 +4,9 @@ const translations = {
       "language.es": "Espanhol PY",
       "language.pt": "Português BR",
       "language.en": "Inglês US",
-    "meta.title": "TV Decor | Leilões Premium para Casa e Decoração",
+    "meta.title": "TV Decor Paraguay | Leilões Premium para Casa e Decoração",
     "meta.description":
-      "TV Decor: empresa especializada em leilões ao vivo e curadoria premium de produtos para casa e decoração.",
+      "TV Decor Paraguay: empresa especializada em leilões ao vivo e curadoria premium de produtos para casa e decoração.",
     "nav.sobre": "Sobre",
     "nav.comoFunciona": "Como Funciona",
     "nav.produtos": "Produtos",
@@ -98,23 +98,23 @@ const translations = {
       "language.es": "Español PY",
       "language.pt": "Português BR",
       "language.en": "English US",
-    "meta.title": "TV Decor | Subastas Premium para Hogar y Decoración",
+    "meta.title": "TV Decor Paraguay | Subastas Premium para Hogar y Decoración",
     "meta.description":
-      "TV Decor: empresa especializada en subastas en vivo y curaduría premium de productos para hogar y decoración.",
+      "TV Decor Paraguay: empresa especializada en subastas en vivo y curaduría premium de productos para hogar y decoración.",
     "nav.sobre": "Sobre",
     "nav.comoFunciona": "Como Funciona",
     "nav.produtos": "Productos",
     "nav.empresa": "Empresa",
     "nav.contato": "Contacto",
     "hero.title": "TV Decor",
-    "hero.subtitle": "Canal de subastas en vivo de productos para el hogar y decoración",
+    "hero.subtitle": "Canal de subastas en vivo en Paraguay para hogar y decoración",
     "hero.description":
-      "Una empresa completa de curaduría, transmisión y comercialización de piezas exclusivas.",
+      "Una empresa integral de curaduría, transmisión y comercialización de piezas exclusivas desde Paraguay.",
     "hero.buttonPrimary": "Conoce el concepto",
     "hero.buttonSecondary": "Ver productos",
     "hero.kpi1.value": "+10.000",
     "hero.kpi1.label": "artículos presentados",
-    "hero.kpi2.value": "3 países",
+    "hero.kpi2.value": "Base en Paraguay",
     "hero.kpi2.label": "operación regional",
     "hero.kpi3.value": "8 años",
     "hero.kpi3.label": "experiencia en curaduría",
@@ -138,7 +138,7 @@ const translations = {
     "comoFunciona.step3Text": "Ofertas en tiempo real con equipo de apoyo comercial.",
     "comoFunciona.step4Title": "Recibe con seguridad",
     "comoFunciona.step4Text": "Logística planificada y acompañamiento hasta la entrega.",
-    "parallax.showroom": "Curaduría internacional para ambientes de autor",
+    "parallax.showroom": "Curaduría internacional desde Paraguay para ambientes de autor",
     "parallax.details": "Diseño, materia prima y acabado con criterio de coleccionista",
     "produtos.title": "Productos destacados",
     "produtos.subtitle": "Productos basados en catálogos premium para mesa y utilitarios de lujo.",
@@ -166,7 +166,7 @@ const translations = {
     "categorias.item5": "Maletines y kits completos",
     "empresa.title": "Empresa responsable",
     "empresa.description":
-      "Importadora y curadora responsable de los productos presentados en las subastas de TV Decor, con operación en Paraguay, Brasil y el mercado regional.",
+      "Importadora y curadora responsable de los productos presentados en las subastas de TV Decor, con base en Paraguay y operación en el mercado regional.",
     "empresa.missaoTitle": "Misión",
     "empresa.missaoText": "Conectar público y diseño por medio de experiencias de compra transparentes.",
     "empresa.visaoTitle": "Visión",
@@ -174,7 +174,7 @@ const translations = {
     "empresa.valoresTitle": "Valores",
     "empresa.valoresText": "Curaduría, confianza comercial, atención consultiva y excelencia.",
     "cta.title": "¿Quieres seguir las próximas subastas en vivo?",
-    "cta.text": "Habla con nuestro equipo comercial para recibir agenda y condiciones especiales.",
+    "cta.text": "Habla con nuestro equipo comercial en Paraguay para recibir agenda y condiciones especiales.",
     "cta.button": "Entrar en contacto",
     "contato.title": "Contacto institucional y comercial",
     "contato.emailLabel": "Correo",
@@ -296,7 +296,7 @@ const languageFlags = {
   "pt-br": {
     src: "assets/flag-br.svg",
     alt: "Brasil",
-    label: "Idioma atual: Português Brasil"
+    label: "Idioma atual: Português do Brasil"
   },
   en: {
     src: "assets/flag-us.svg",
@@ -325,6 +325,26 @@ function applyTranslations(language) {
   const description = document.querySelector('meta[name="description"]');
   if (description && dictionary["meta.description"]) {
     description.setAttribute("content", dictionary["meta.description"]);
+  }
+
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle && dictionary["meta.title"]) {
+    ogTitle.setAttribute("content", dictionary["meta.title"]);
+  }
+
+  const ogDescription = document.querySelector('meta[property="og:description"]');
+  if (ogDescription && dictionary["meta.description"]) {
+    ogDescription.setAttribute("content", dictionary["meta.description"]);
+  }
+
+  const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+  if (twitterTitle && dictionary["meta.title"]) {
+    twitterTitle.setAttribute("content", dictionary["meta.title"]);
+  }
+
+  const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+  if (twitterDescription && dictionary["meta.description"]) {
+    twitterDescription.setAttribute("content", dictionary["meta.description"]);
   }
 
   document.querySelectorAll("[data-i18n]").forEach((node) => {
