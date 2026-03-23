@@ -35,6 +35,8 @@ const translations = {
       "A TV Decor é uma operação de mídia e comércio especializada em produtos premium para casa. Combinamos curadoria, transmissão ao vivo e suporte consultivo.",
     "sobre.text2":
       "Cada transmissão é planejada para apresentar histórias, diferenciais técnicos e oportunidades exclusivas de compra para um público exigente.",
+    "sobre.videoButton": "Ver video de apresentacao",
+    "sobre.videoClose": "Fechar video",
     "comoFunciona.title": "Como funciona",
     "comoFunciona.step1Title": "Assista à programação",
     "comoFunciona.step1Text": "Transmissões com agenda semanal e apresentação detalhada.",
@@ -82,8 +84,9 @@ const translations = {
     "cta.title": "Quer acompanhar os próximos leilões ao vivo?",
     "cta.text": "Fale com nosso time comercial para receber agenda e condições especiais.",
     "cta.button": "Entrar em contato",
-    "contato.title": "Contato institucional e comercial",
-    "contato.emailLabel": "E-mail",
+    "contato.title": "Nossos contatos",
+    "contato.callLabel": "Ligue agora mesmo:",
+    "contato.websiteLabel": "Site",
     "contato.addressLabel": "Endereço",
     "contato.formName": "Nome",
     "contato.formEmail": "E-mail",
@@ -129,6 +132,8 @@ const translations = {
       "TV Decor es una operación de medios y comercio especializada en productos premium para el hogar. Combinamos curaduría, transmisión en vivo y soporte consultivo.",
     "sobre.text2":
       "Cada transmisión está planificada para presentar historias, diferenciales técnicos y oportunidades exclusivas de compra para un público exigente.",
+    "sobre.videoButton": "Ver video de presentacion",
+    "sobre.videoClose": "Cerrar video",
     "comoFunciona.title": "Cómo funciona",
     "comoFunciona.step1Title": "Mira la programación",
     "comoFunciona.step1Text": "Transmisiones con agenda semanal y presentación detallada.",
@@ -176,8 +181,9 @@ const translations = {
     "cta.title": "¿Quieres seguir las próximas subastas en vivo?",
     "cta.text": "Habla con nuestro equipo comercial en Paraguay para recibir agenda y condiciones especiales.",
     "cta.button": "Entrar en contacto",
-    "contato.title": "Contacto institucional y comercial",
-    "contato.emailLabel": "Correo",
+    "contato.title": "Nuestros contactos",
+    "contato.callLabel": "Llame ahora mismo:",
+    "contato.websiteLabel": "Sitio web",
     "contato.addressLabel": "Dirección",
     "contato.formName": "Nombre",
     "contato.formEmail": "Correo",
@@ -223,6 +229,8 @@ const translations = {
       "TV Decor is a media and commerce operation focused on premium home products. We combine curation, live broadcasting, and consulting support.",
     "sobre.text2":
       "Each broadcast is designed to present stories, technical details, and exclusive buying opportunities for a demanding audience.",
+    "sobre.videoButton": "Watch presentation video",
+    "sobre.videoClose": "Close video",
     "comoFunciona.title": "How it works",
     "comoFunciona.step1Title": "Watch the schedule",
     "comoFunciona.step1Text": "Broadcasts with weekly agenda and detailed presentation.",
@@ -270,8 +278,9 @@ const translations = {
     "cta.title": "Want to follow upcoming live auctions?",
     "cta.text": "Talk to our commercial team to receive schedule and special conditions.",
     "cta.button": "Get in touch",
-    "contato.title": "Institutional and commercial contact",
-    "contato.emailLabel": "Email",
+    "contato.title": "Our contacts",
+    "contato.callLabel": "Call us now:",
+    "contato.websiteLabel": "Website",
     "contato.addressLabel": "Address",
     "contato.formName": "Name",
     "contato.formEmail": "Email",
@@ -561,6 +570,38 @@ function setupContactForm() {
   });
 }
 
+function setupPresentationVideo() {
+  const action = document.querySelector(".presentation-video-action");
+  const container = document.getElementById("presentation-video");
+  const player = document.getElementById("presentation-video-player");
+  const close = document.querySelector(".presentation-video-close");
+
+  if (!action || !container || !player || !close) {
+    return;
+  }
+
+  const closePlayer = () => {
+    player.pause();
+    player.currentTime = 0;
+    container.hidden = true;
+    action.focus();
+  };
+
+  action.addEventListener("click", () => {
+    container.hidden = false;
+    container.scrollIntoView({ behavior: "smooth", block: "nearest" });
+
+    const playPromise = player.play();
+    if (playPromise && typeof playPromise.catch === "function") {
+      playPromise.catch(() => {
+        // If autoplay is blocked, player controls remain visible for manual start.
+      });
+    }
+  });
+
+  close.addEventListener("click", closePlayer);
+}
+
 function setupYear() {
   const year = document.getElementById("year");
   if (year) {
@@ -577,6 +618,7 @@ function init() {
   setupRevealAnimations();
   setupImageFallbacks();
   setupContactForm();
+  setupPresentationVideo();
   setupYear();
   applyTranslations(language);
 }

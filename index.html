@@ -153,6 +153,26 @@
             Cada transmisión está planificada para presentar historias, diferenciales técnicos y
             oportunidades exclusivas de compra para un público exigente.
           </p>
+          <button type="button" class="btn-gold presentation-video-action" data-i18n="sobre.videoButton">
+            Ver video de presentacion
+          </button>
+          <div class="presentation-video" id="presentation-video" hidden>
+            <div class="presentation-video-head">
+              <button type="button" class="btn-dark presentation-video-close" data-i18n="sobre.videoClose">
+                Cerrar video
+              </button>
+            </div>
+            <video
+              id="presentation-video-player"
+              controls
+              preload="metadata"
+              playsinline
+              aria-label="Video de presentacion institucional"
+            >
+              <source src="assets/video-apresentacao.mp4" type="video/mp4" />
+              Tu navegador no soporta la reproducción de video.
+            </video>
+          </div>
         </div>
       </section>
 
@@ -353,21 +373,27 @@
       <section id="contato" class="section reveal">
         <div class="section-head centered">
           <p class="eyebrow" data-i18n="labels.contact">Contacto</p>
-          <h2 data-i18n="contato.title">Contacto institucional y comercial</h2>
+          <h2 data-i18n="contato.title">Nuestros contactos</h2>
         </div>
 
         <div class="contact-grid">
-          <a class="contact-card" href="mailto:contato@tvdecor.com.py">
-            <span data-i18n="contato.emailLabel">E-mail</span>
-            <strong>contato@tvdecor.com.py</strong>
+          <a class="contact-card" href="tel:+595981575030">
+            <span data-i18n="contato.callLabel">Llame ahora mismo:</span>
+            <strong>+595 981 575030</strong>
           </a>
-          <a class="contact-card" href="https://wa.me/595986370150" target="_blank" rel="noreferrer">
-            <span>WhatsApp</span>
-            <strong>+595 986 370150</strong>
+          <a class="contact-card" href="https://www.tvdecor.com.py" target="_blank" rel="noreferrer">
+            <span data-i18n="contato.websiteLabel">Sitio web</span>
+            <strong>www.tvdecor.com.py</strong>
           </a>
           <div class="contact-card">
             <span data-i18n="contato.addressLabel">Endereço</span>
-            <strong>Asunción, Paraguay</strong>
+            <strong>
+              Shopping DUBAI<br />
+              Pedro Juan Caballero<br />
+              Departamento del Amanbay<br />
+              Paraguai<br />
+              Post code 080101
+            </strong>
           </div>
         </div>
 
